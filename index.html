@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Aymen Ansari's academic homepage. Research interests in science and technology studies, information studies, social data science, and digital representation.">
+  <title>Aymen Ansari | Research &amp; Writing</title>
+  <style>
+    :root {
+      --background: #f8f7f3;
+      --paper: #fdfcf9;
+      --ink: #232824;
+      --muted: #606963;
+      --accent: #346456;
+      --line: #dadfd7;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--background); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-underline-offset: 0.19em; }
+    a:hover { color: var(--accent); }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .skip { position: absolute; top: -100px; left: 16px; background: white; padding: 10px; z-index: 10; }
+    .skip:focus { top: 16px; }
+    .wrap { max-width: 1050px; padding: 0 32px; margin: 0 auto; }
+    .header { border-bottom: 1px solid var(--line); }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding-top: 24px; padding-bottom: 24px; }
+    .brand { text-decoration: none; font-size: 17px; font-weight: 650; letter-spacing: -.02em; }
+    .nav { display: flex; flex-wrap: wrap; gap: 24px; font-size: 14px; }
+    .nav a { text-decoration: none; color: var(--muted); }
+    .nav a:hover { color: var(--accent); }
+    .hero { display: grid; grid-template-columns: 1.4fr 0.6fr; align-items: end; gap: 50px; padding-top: 108px; padding-bottom: 108px; }
+    .eyebrow { color: var(--accent); text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: .19em; margin: 0 0 18px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, .serif { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.045em; }
+    h1 { font-size: clamp(52px, 6.5vw, 84px); line-height: 1.02; margin-bottom: 29px; }
+    .lead { font-family: Georgia, "Times New Roman", serif; font-size: clamp(23px, 2.4vw, 31px); line-height: 1.4; letter-spacing: -.018em; max-width: 650px; margin-bottom: 21px; }
+    .intro { max-width: 645px; color: var(--muted); font-size: 16px; margin-bottom: 0; }
+    .side-note { border-left: 1px solid var(--line); padding-left: 22px; padding-bottom: 4px; font-size: 14px; color: var(--muted); }
+    .side-note strong { display: block; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); margin-bottom: 8px; }
+    .section { border-top: 1px solid var(--line); padding-top: 52px; padding-bottom: 66px; }
+    .section-head { display: grid; grid-template-columns: 0.55fr 1.45fr; gap: 28px; margin-bottom: 28px; }
+    h2 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .13em; margin: 0; color: var(--accent); }
+    .section-copy { font-size: 17px; max-width: 670px; margin-bottom: 0; }
+    .interests { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 34px; }
+    .interest { background: var(--paper); border: 1px solid var(--line); padding: 28px 28px 26px; }
+    h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: 24px; line-height: 1.3; letter-spacing: -.025em; margin-bottom: 12px; }
+    .interest p { font-size: 14px; color: var(--muted); margin-bottom: 0; }
+    .work { margin-top: 12px; }
+    .work-item { display: grid; grid-template-columns: 190px 1fr; gap: 30px; border-bottom: 1px solid var(--line); padding: 28px 0; }
+    .work-item:first-child { border-top: 1px solid var(--line); }
+    .work-meta { color: var(--accent); font-size: 13px; padding-top: 3px; }
+    .work-item h3 { font-size: 25px; margin-bottom: 9px; }
+    .work-item p { color: var(--muted); font-size: 15px; margin-bottom: 0; max-width: 660px; }
+    .bio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; }
+    .bio-grid p { margin-bottom: 15px; }
+    .small-title { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+    .qual { margin-bottom: 22px; }
+    .qual strong { display: block; font-weight: 600; }
+    .qual span { color: var(--muted); font-size: 14px; }
+    .contact { background: #e9eee8; border-top: 1px solid var(--line); padding: 56px 0; }
+    .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 25px; }
+    .contact h2 { margin-bottom: 13px; }
+    .contact p { font-family: Georgia, "Times New Roman", serif; font-size: clamp(23px, 3.3vw, 34px); letter-spacing: -.03em; margin-bottom: 0; }
+    .contact a { white-space: nowrap; color: var(--accent); font-size: 15px; font-weight: 600; }
+    footer { padding: 25px 0 35px; color: var(--muted); font-size: 12px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 15px; }
+    @media (max-width: 760px) {
+      .wrap { padding: 0 21px; }
+      .header-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+      .nav { gap: 18px; }
+      .hero { display: block; padding-top: 72px; padding-bottom: 76px; }
+      .side-note { margin-top: 34px; }
+      .section-head { grid-template-columns: 1fr; gap: 16px; }
+      .section { padding-top: 43px; padding-bottom: 51px; }
+      .interests, .bio-grid { grid-template-columns: 1fr; }
+      .work-item { grid-template-columns: 1fr; gap: 7px; }
+      .contact-inner { align-items: flex-start; flex-direction: column; }
+      footer .wrap { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">Aymen Ansari</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#research">Research interests</a>
+        <a href="#work">Selected work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="wrap hero" id="top">
+      <div>
+        <p class="eyebrow">Research · Technology · Society</p>
+        <h1>Hello, I'm<br>Aymen.</h1>
+        <p class="lead">I’m interested in how digital systems represent people, places, and social life.</p>
+        <p class="intro">My work and research interests sit across science and technology studies, information studies, and social data science. I am especially interested in how representations are constructed, evaluated, and made authoritative.</p>
+      </div>
+      <aside class="side-note" aria-label="Academic background">
+        <strong>Background</strong>
+        MSc Financial Technology<br>
+        University of Exeter<br><br>
+        BA (Honours) Communication &amp; Design<br>
+        Habib University
+      </aside>
+    </section>
+
+    <section class="wrap section" id="research">
+      <div class="section-head">
+        <h2>Research interests</h2>
+        <p class="section-copy">My emerging research examines what digital representations include, what they leave out, and how different people come to trust or challenge them.</p>
+      </div>
+      <div class="interests">
+        <article class="interest">
+          <h3>Representation and authority</h3>
+          <p>Digital maps, databases, models, and other documentary systems shape how institutions understand and act upon social worlds.</p>
+        </article>
+        <article class="interest">
+          <h3>Evaluating AI in social contexts</h3>
+          <p>How should AI-generated accounts of people and cultural practices be evaluated, and whose interpretations should count?</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="work">
+      <div class="section-head">
+        <h2>Selected work</h2>
+        <p class="section-copy">A selection of projects spanning ethnographic inquiry, quantitative methods, and applied research. Detailed project pages will follow as this site develops.</p>
+      </div>
+      <div class="work">
+        <article class="work-item">
+          <div class="work-meta">Postgraduate research</div>
+          <div><h3>Exeter Cathedral evaluation</h3><p>Applied research and evaluation undertaken during postgraduate study at the University of Exeter.</p></div>
+        </article>
+        <article class="work-item">
+          <div class="work-meta">Quantitative research</div>
+          <div><h3>Econometrics and data analysis</h3><p>Empirical analysis conducted as part of MSc training, using statistical and quantitative research methods.</p></div>
+        </article>
+        <article class="work-item">
+          <div class="work-meta">Financial technology</div>
+          <div><h3>Financial verification and Open Banking</h3><p>Exploring financial verification through transaction data, statistical modelling, and user-centred product development.</p></div>
+        </article>
+        <article class="work-item">
+          <div class="work-meta">Ethnographic fieldwork</div>
+          <div><h3>Sacred geographies in Lasbela</h3><p>Field research on Nanakpanthi sacred geographies in Balochistan, attending to connections between people, religious practice, and place.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap section" id="about">
+      <div class="section-head">
+        <h2>About</h2>
+        <p class="section-copy">I bring experience from both academic research and the design of digital services in banking and financial technology.</p>
+      </div>
+      <div class="bio-grid">
+        <div>
+          <p>My undergraduate training combined communication and design with interdisciplinary approaches to science, technology, society, and research. At postgraduate level, I have developed quantitative and technical skills through financial technology and econometrics.</p>
+          <p>Professionally, I have worked in UX research, product and service design, and digital transformation. These experiences inform my interest in how technical systems are developed and how their assumptions affect the people they are designed to represent or serve.</p>
+        </div>
+        <div>
+          <p class="small-title">Education</p>
+          <div class="qual"><strong>University of Exeter</strong><span>MSc Financial Technology (with Industrial Experience)</span></div>
+          <div class="qual"><strong>Habib University</strong><span>BA (Honours) Communication &amp; Design</span></div>
+          <p class="small-title">Methods and approaches</p>
+          <p>Ethnographic research · Interviews · UX research · Survey design · Quantitative analysis · Python · R</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <section class="contact" id="contact">
+    <div class="wrap contact-inner">
+      <div><h2>Get in touch</h2><p>Interested in exchanging ideas?</p></div>
+      <a href="https://github.com/aymenansari5-web" target="_blank" rel="noopener noreferrer">Find me on GitHub ↗</a>
+    </div>
+  </section>
+  <footer><div class="wrap"><span>© 2026 Aymen Ansari</span><span>Built with HTML &amp; CSS · Hosted on GitHub Pages</span></div></footer>
+</body>
+</html>
